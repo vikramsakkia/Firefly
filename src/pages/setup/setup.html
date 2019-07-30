@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Secure Person</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1 style="color: #9cff00">Upload Photos to the Database!</h1>
+
+  <h4>
+    Verify that you are safe.
+  </h4>
+  <button ion-button color="secondary" round outline (click)="onClick2($event);">Verify Existing User</button>
+
+
+  <h4>
+    Add yourself to our database of people.
+  </h4>
+
+  <form [formGroup]="credentialsForm" (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['email']" type="email"></ion-input>    
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Age</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['password']" type="number"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Blood Group</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['bloodgroup']" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Ailment</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['ailment']" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Medication</ion-label>
+      <ion-input [formControl]="credentialsForm.controls['medication']" type="text"></ion-input>
+    </ion-item>
+
+  </form>
+
+  <p>
+    <button ion-button color="primary" round outline (click)="onClick($event);">Upload new Image</button>
+  </p>
+  <p style="font-size: 13pt">
+    {{message}}
+    <br>
+    {{message2}}
+    <br>
+    {{message3}}
+    <br>
+    {{message4}}
+    <br>
+    {{message5}}
+    <br><br>
+    {{message6}}
+  </p>
+</ion-content>

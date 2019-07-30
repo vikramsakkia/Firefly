@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Send Distress Signal</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1 style="color: #9cff00">Are you in trouble?</h1>
+  <h4>Press the RECORD button and notify responders of your condition, any and all information is useful!</h4>
+  <p>
+    <button ion-button color="danger" center round outline (click)="onClick($event);">RECORD</button>
+  </p>
+  <p style="font-size: 13pt">
+    {{message}}
+  </p>
+  <p style="font-size: 13pt">
+    {{message2}}
+    <br>
+    {{message3}}
+    <br>
+    {{message4}}
+    <br>
+    {{message5}}
+    <br>
+    {{message6}}
+  </p>
+</ion-content>

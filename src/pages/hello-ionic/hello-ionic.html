@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Firefly</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1 style="color: #9cff00">Welcome to Firefly!</h1>
+  <h4>Save yourself, notify others of your presence, find shelter as soon as possible</h4>
+  
+  <p>
+    <ion-item>
+      <img src="../../assets/map.png">
+    </ion-item>
+  </p>
+  <p>
+    <button ion-button color="primary" (click)="connect()" >Distress Signal</button>
+  </p>
+  <p style="font-size: 13pt">
+    {{message}}
+  </p>
+</ion-content>
